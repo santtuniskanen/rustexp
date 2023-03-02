@@ -20,3 +20,10 @@ Next we use the `stdin()` function from the standard input/output library which 
 io::stdin()
         .read_line(&mut guess)
 ```
+
+### Handling potential failure
+The `.read_line` method doesn't just save user input into a string, it also returns a `Result` value, where the type is an enumeration. The value can be one of two things: `Ok` or `Err`. The Result has an `expect` method we can call.
+``` Rust
+.expect("Failed to read line");
+```
+In the case that the method brings a Result of 'Err', maybe due to underlying error coming from your Operating System, the '.expect' method crashes the program and displays a message we passed as an argument to the method.
