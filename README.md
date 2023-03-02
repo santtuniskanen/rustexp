@@ -1,7 +1,9 @@
 # rustexp
-A repository containing code written in Rust
+A repository containing code written in Rust.
+I am documenting my learning process here.<br>
+Almost all of the information here comes from the official [Rust documentation](https://doc.rust-lang.org/book/) 
 
-For fun and experimentation
+For experimentation and fun!
 
 # Setting up a project
 When starting a new project, we need to type the following piece of code into our terminal <br>
