@@ -83,5 +83,22 @@ In the following line, `trim()` function removes whitespace and `parse()` functi
 ``` Rust
 guess.trim().parse()
 ```
-Parse can only work on characters that can logically be converted into numbers. This means that erros can happen very easily. If parse returns 'Err' Result, he expect call will crash the application and print the error message.
-
+Parse can only work on characters that can logically be converted into numbers. This means that erros can happen very easily. If parse returns 'Err' Result, he expect call will crash the application and print the error message. We'll get to this point later on since even this result isn't perfect as inputting characters will cause the except method to panic.
+&nbsp;
+## Loooooops
+In order to guess multiple times, we can throw our program inside a loop:
+``` Rust 
+loop {
+        // -- snip --
+}
+```
+We need to also remember to exit the loop eventually, which we can do with the `break` statement.
+``` Rust
+loop {
+        condition;
+        condition;
+        condition met {
+                break;
+        }
+}
+```
