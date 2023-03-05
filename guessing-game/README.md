@@ -102,3 +102,12 @@ loop {
         }
 }
 ```
+&nbsp;
+## Handling invalid input
+When we added the match statement and converted our `guess` variable from string to int, we didn't quite finish that part yet. We are going to remove the .expect() statement and replacing it with a match statement.
+``` Rust
+    let guess: u32 = match guess.trim().parse() {
+        Ok(num) => num,
+        Err(_) => continue,
+    };
+```
