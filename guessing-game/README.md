@@ -52,5 +52,8 @@ In the case that the method brings a Result of 'Err', maybe due to underlying er
 ## Generating a random number
 We can use the [rand](https://crates.io/crates/rand) library for random number generation.
 To add the libary to our project we could run 'cargo add rand' or go to the `Cargo.toml` file and manually add `rand = "0.8.5"` in the dependencies section. Then we only need to run `cargo build` and the library is installed to our project.
+&nbsp;
+### using the random function
+
 
 
