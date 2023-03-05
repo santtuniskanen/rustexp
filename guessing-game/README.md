@@ -64,8 +64,8 @@ Next we need to import a crate called `cmp` which stands for comparison. This li
 This function is called on the `guess` variable we defined earlier. We are also using the `match` expression decide what to do next.
 ``` Rust
     match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small"),
-        Ordering::Greater => println!("Too big"),
+        Ordering::Less => println!("Your number is too small"),
+        Ordering::Greater => println!("Your number is too big"),
         Ordering::Equal => println!("You win!"),
     }
 ```
@@ -77,4 +77,11 @@ In order to fix this error, we add this line of code to the body...
 ``` Rust
 let guess: u32 = guess.trim().parse().expect("Please type a number!");
 ```
-Here we are `shadowing` the original `guess` value we defined earlier and are saving user input into. It's useful when we need to convert values to other types without having to create new variables and creating more clutter.
+Here we are `shadowing` the original `guess` value we defined earlier and are saving user input into. It's useful when we need to convert values to other types without having to create new variables and creating more clutter. In order to do this we tell Rust that guess should be type of `unsigned` 32-bit integer. Unsigned means that the integer can only hold non-negative values. 
+&nbsp;
+In the following line, `trim()` function removes whitespace and `parse()` function converts strings to other types. The function also returns another Result type, 'Ok' and 'Err'. 
+``` Rust
+guess.trim().parse()
+```
+Parse can only work on characters that can logically be converted into numbers. This means that erros can happen very easily. If parse returns 'Err' Result, he expect call will crash the application and print the error message.
+
