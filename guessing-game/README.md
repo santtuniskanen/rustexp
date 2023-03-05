@@ -6,6 +6,27 @@ Here we are importing the default input/output library.
 use std::io;
 ```
 
+## Printing in Rust
+Printing in Rust seems very straightforward.
+``` Rust
+println!("Hello World!");
+```
+You can also print variables very easily by including them between curly brackets.
+``` Rust
+let x = 5;
+println!("x equals {x}"); 
+// This would print "x equals 5"
+``` 
+You can also set empty brackets inside the print statement and outside the quotation marks
+add the expressions.
+``` Rust
+let x = 5;
+let y = 5;
+println!("x multiplied by y equals {}", x * y);
+// This would print "x multiplied by y equals 25"
+```
+
+
 ## Creating variables
 The `let` keyword in Rust is used to declare a variable. Adding the keyword `mut` will make that variable mutable, since all variables in Rust are immutable by default. <br>
 `String::new();` creates an empty string, indicated by the `new()` function. It does not allocate any initial buffer, so it can cause excessive allocation later when adding data to it.
