@@ -1,4 +1,5 @@
 # Guessing Game
+Guessing games are usually a pretty good way to start exploring new languages. They teach you about variables, functions, libraries and control flow.
 
 ## Importing libraries
 Here we are importing the default input/output library.
@@ -47,9 +48,9 @@ The `.read_line` method doesn't just save user input into a string, it also retu
 .expect("Failed to read line");
 ```
 In the case that the method brings a Result of 'Err', maybe due to underlying error coming from your Operating System, the '.expect' method crashes the program and displays a message we passed as an argument to the method.
-
+&nbsp;
 ## Generating a random number
 We can use the [rand](https://crates.io/crates/rand) library for random number generation.
-To add the libary to our project we could run 'cargo add rand' or go to the 'Cargo.toml' file and manually add 'rand = "0.8.5"' in the dependencies section. Then we only need to run 'cargo build' and the library is installed to our project.
+To add the libary to our project we could run 'cargo add rand' or go to the `Cargo.toml` file and manually add `rand = "0.8.5"` in the dependencies section. Then we only need to run `cargo build` and the library is installed to our project.
 
 
