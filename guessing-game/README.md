@@ -62,6 +62,13 @@ Here you can see I have defined a variable called `secret_number`. In order to c
 Next we need to import a crate called `cmp` which stands for comparison. This library will let us compare our values with a function called `Ordering`. Just like the `.read_line()` function, Ordering is a type of `Enum` and has variants `Less, Greater and Equal`.
 &nbsp;
 This function is called on the `guess` variable we defined earlier. We are also using the `match` expression decide what to do next.
+``` Rust
+    match guess.cmp(&secret_number) {
+        Ordering::Less => println!("Too small"),
+        Ordering::Greater => println!("Too big"),
+        Ordering::Equal => println!("You win!"),
+    }
+```
 &nbsp;
 ### Potential issues we need to fix
 This match block wouldn't work on its own right now. When we defined `guess` variable, we called the `String::new` method to create an empty `string`. The randomly generated `secret_number` however is the type of int, so there is a mismatch.
