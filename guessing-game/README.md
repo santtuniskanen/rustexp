@@ -53,5 +53,21 @@ In the case that the method brings a Result of 'Err', maybe due to underlying er
 We can use the [rand](https://crates.io/crates/rand) library for random number generation.
 To add the libary to our project we could run 'cargo add rand' or go to the `Cargo.toml` file and manually add `rand = "0.8.5"` in the dependencies section. Then we only need to run `cargo build` and the library is installed to our project.
 &nbsp;
-
-
+``` Rust
+let secret_number = rand::thread_rng().gen_range(1..=100);
+```
+Here you can see I have defined a variable called `secret_number`. In order to create the random number, we use the `thread_rng()` function, which gives the seed for our rng by the operating system. After that we call `gen_range(1..=100)` which sets the range of the randomization between 1 and 100.
+&nbsp;
+## Comparing player choice to the randomly generated value
+Next we need to import a crate called `cmp` which stands for comparison. This library will let us compare our values with a function called `Ordering`. Just like the `.read_line()` function, Ordering is a type of `Enum` and has variants `Less, Greater and Equal`.
+&nbsp;
+This function is called on the `guess` variable we defined earlier. We are also using the `match` expression decide what to do next.
+&nbsp;
+### Potential issues we need to fix
+This match block wouldn't work on its own right now. When we defined `guess` variable, we called the `String::new` method to create an empty `string`. The randomly generated `secret_number` however is the type of int, so there is a mismatch.
+&nbsp;
+In order to fix this error, we add this line of code to the body...
+``` Rust
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+Here we are `shadowing` the original `guess` value we defined earlier and are saving user input into. It's useful when we need to convert values to other types without having to create new variables and creating more clutter.
