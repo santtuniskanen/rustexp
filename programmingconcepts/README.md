@@ -52,4 +52,12 @@ We can shadow a variable by using its name and repeating the use of `let` keywor
 let x = 5;
 let x = x + 1;
 ```
-Now the value of `x` would be `6`. But how, since we didn't allow mutability? The reason why is because we are essentially creating a new variable, shown by the use of `let`. If we didn't use that keyword, we would get compile errors. This way we can reuse the name of the variable
+Now the value of `x` would be `6`. But how, since we didn't allow mutability? The reason why is because we are essentially creating a new variable, shown by the use of `let`. If we didn't use that keyword, we would get compile errors. This way we can reuse the name of the variable. <br>
+An example where this is useful is when checking the length of a string and returning an integer.
+``` Rust
+let spaces = "   ";
+let spaces = spaces.len();
+```
+Initially we can see that the variable `spaces` is a type of `string`. After we use the `len()` function, it returns a number type and assigns it to the spaces variable. If we tried to allow mutability, we would get an error since you aren't allowed to mutate the type of a variable.
+&nbsp;
+## Data Types
