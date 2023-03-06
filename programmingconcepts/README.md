@@ -61,3 +61,27 @@ let spaces = spaces.len();
 Initially we can see that the variable `spaces` is a type of `string`. After we use the `len()` function, it returns a number type and assigns it to the spaces variable. If we tried to allow mutability, we would get an error since you aren't allowed to mutate the type of a variable.
 &nbsp;
 ## Data Types
+Rust is a statically typed language. It must know the types of variables at compile time, but the compiler can infer what type we want based on the value and how it's used. Sometimes we need to manually define the type in order for our code to work. For example, in the guessing game project we had this line to convert a string to a number: 
+``` Rust
+let guess: u32 = guess.trim().parse().expect("Please type a number!");
+```
+If we don't add the `u32` type annotation, the compiler doesn't have enough information to know which type we want to use.
+&nbsp;
+### Scalar Types
+A `scalar` type represents a single value. In Rust we have four `primary` scalar types; ints, floats, bools and chars. 
+#### Integer Types
+
+#### Floating-point Types
+
+#### Numeric Operations
+
+#### Booleans
+
+#### Characters
+
+
+### Compound Types
+
+#### Tuples
+
+#### Arrays
