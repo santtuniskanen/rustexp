@@ -1,5 +1,6 @@
 fn main() {
     variables(); // Now I learned how to do function calls :D
+    data_types();
 }
 
 fn variables() {
@@ -13,5 +14,5 @@ fn variables() {
 }
 
 fn data_types() {
-    
+
 }
