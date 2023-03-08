@@ -70,6 +70,7 @@ If we don't add the `u32` type annotation, the compiler doesn't have enough info
 ### Scalar Types
 A `scalar` type represents a single value. In Rust we have four `primary` scalar types; ints, floats, bools and chars. 
 #### Integer Types
+Integers are numbers without fractional component. In Rust we have signed and unsigned integers and they have an explicit size. The difference between unsigned and signed is that the former variant can only have positive values while the latter includes negative values. Signed numbers are stored using `two's complement representation`.
 
 #### Floating-point Types
 
