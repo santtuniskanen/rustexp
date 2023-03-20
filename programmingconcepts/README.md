@@ -73,13 +73,18 @@ A `scalar` type represents a single value. In Rust we have four `primary` scalar
 Integers are numbers without fractional component. In Rust we have signed and unsigned integers and they have an explicit size. The difference between unsigned and signed is that the former variant can only have positive values while the latter includes negative values. Signed numbers are stored using `two's complement representation`.
 
 #### Floating-point Types
+Rust's floating-point types are `f32` and `f64`, 32 and 64 bits in size. By default the type is f64, since it's as fast as f32 on modern chips while offering more precision. All floats are signed, which meant values can be both negative and positive.
 
 #### Numeric Operations
+Rust supports all the basic mathematical operations you'd expect like addition, subtraction, multiplication, division and remainder. 
 
 #### Booleans
-
+Booleans are one byte in size. The Boolean type is specified using `bool`.
+``` Rust
+let t = true;
+let f: bool = false // Explicit type annotation
+```
 #### Characters
-
 
 ### Compound Types
 

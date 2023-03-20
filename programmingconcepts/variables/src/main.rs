@@ -1,9 +1,4 @@
-fn main() {
-    variables(); // Now I learned how to do function calls :D
-    data_types();
-}
-
-fn variables() {
+fn _variables() {
     let mut x = 5;
     println!("x equals {x}");
     x = 6;
@@ -14,5 +9,15 @@ fn variables() {
 }
 
 fn data_types() {
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3;
 
+    println!("{}", quotient);
+    println!("{}", truncated);
 }
+
+fn main() {
+    //variables(); // Now I learned how to do function calls :D
+    data_types();
+}
+
