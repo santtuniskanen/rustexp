@@ -75,20 +75,42 @@ Integers are numbers without fractional component. In Rust we have signed and un
 &nbsp;
 #### Floating-point Types
 Rust's floating-point types are `f32` and `f64`, 32 and 64 bits in size. By default the type is f64, since it's as fast as f32 on modern chips while offering more precision. All floats are signed, which meant values can be both negative and positive.
-
+&nbsp;
 #### Numeric Operations
 Rust supports all the basic mathematical operations you'd expect like addition, subtraction, multiplication, division and remainder. 
-
+&nbsp;
 #### Booleans
 Booleans are one byte in size. The Boolean type is specified using `bool`.
 ``` Rust
 let t = true;
 let f: bool = false // Explicit type annotation
 ```
+&nbsp;
 #### Characters
-
+``` Rust
+fn main() {
+    let c = 'z';
+    let z: char = 'ℤ'; // explicit type annotation
+    let heart_eyed_cat = '😻';
+}
+```
+char is specified with single quotes whereas strings are marked with double quotes. Rust's char is four bytes in size.
+&nbsp;
 ### Compound Types
-
+Compound types can group multiple values into one type. Rust has two primitive compound types which are `tuples` and `arrays`.
+&nbsp;
 #### Tuples
-
+A tuple is a general way of grouping together a number of values with a variet of types into one compound type. Tuples have fixed length.
+``` Rust
+fn main() {
+    let tup: (i32, f64, u8) = (500, 6.4, 1);
+}
+```
+The variable `tup` binds to the entire tuple.
 #### Arrays
+Another way to have a collection of multiple values is with an array. Every element in an array must have the same type.
+``` Rust
+fn main() {
+    let a = [1, 2, 3, 4, 5];
+}
+```
