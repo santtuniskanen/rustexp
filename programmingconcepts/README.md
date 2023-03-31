@@ -69,9 +69,10 @@ If we don't add the `u32` type annotation, the compiler doesn't have enough info
 &nbsp;
 ### Scalar Types
 A `scalar` type represents a single value. In Rust we have four `primary` scalar types; ints, floats, bools and chars. 
+&nbsp;
 #### Integer Types
 Integers are numbers without fractional component. In Rust we have signed and unsigned integers and they have an explicit size. The difference between unsigned and signed is that the former variant can only have positive values while the latter includes negative values. Signed numbers are stored using `two's complement representation`.
-
+&nbsp;
 #### Floating-point Types
 Rust's floating-point types are `f32` and `f64`, 32 and 64 bits in size. By default the type is f64, since it's as fast as f32 on modern chips while offering more precision. All floats are signed, which meant values can be both negative and positive.
 
